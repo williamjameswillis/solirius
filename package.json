@@ -8,7 +8,7 @@
     "cy-task1": "cypress run --spec \"cypress/e2e/RegularWorker.feature\"",
     "cy-open": "cypress open",
     "cy-bonus": "yarn start & cypress run --spec \"cypress/e2e/bonusTest.cy.ts\"",
-    "format": "prettier cypress/support/*.ts --write",
+    "format": "prettier cypress/support/**/*.ts --write",
     "lint": "eslint ."
   },
   "author": "",

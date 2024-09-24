@@ -1,13 +1,13 @@
-import { Result } from 'axe-core';
+import { Result } from "axe-core";
 
-const WCAG_LEVEL = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'];
+const WCAG_LEVEL = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"];
 
 const terminalLog = (violations: Result[]) => {
   cy.task(
-    'log',
+    "log",
     `${violations.length} accessibility violation${
-      violations.length === 1 ? '' : 's'
-    } ${violations.length === 1 ? 'was' : 'were'} detected`
+      violations.length === 1 ? "" : "s"
+    } ${violations.length === 1 ? "was" : "were"} detected`,
   );
   const violationData = violations.map(({ id, impact, description, tags }) => ({
     id,
@@ -15,7 +15,7 @@ const terminalLog = (violations: Result[]) => {
     description,
     tags,
   }));
-  cy.task('table', violationData);
+  cy.task("table", violationData);
 };
 
 export const a11y = (): Cypress.Chainable => {
@@ -24,11 +24,11 @@ export const a11y = (): Cypress.Chainable => {
     undefined,
     {
       runOnly: {
-        type: 'tag',
+        type: "tag",
         values: WCAG_LEVEL,
       },
     },
-    terminalLog
+    terminalLog,
   );
   return cy;
 };
