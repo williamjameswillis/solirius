@@ -26,7 +26,7 @@ Feature: Calculate Holiday Entitlement on the government website for regular wor
             | days-worked-per-week  | full-year | 2 | 11.2  | 
             | days-worked-per-week  | full-year | 1 | 5.6 | 
 
-    Scenario Outline: Negative Edge cases for number of days worked per week page - validation error displayed when invalid days are entered - value is '<ValueToEnter>' 
+    Scenario Outline: Negative Edge cases for number of days worked per week page - validation error displayed when invalid days are entered - value is '<ValueToEnter>'
         Given I am on the "Calculate your holiday entitlement" page
         When I chose Start Now
         Then I am on the regular or irregular hours page

@@ -11,50 +11,50 @@
 //
 
 import {
-    checkIdHasText,
-    clickDataModuleByText,
-    clickByID,
-    clickByValue,
-    assertURLContains,
-    enterValueByID,
-    assertDataModuleHasText,
-    enterDate
-  } from './helpers';
-  
-  declare global {
-    namespace Cypress {
-      interface Chainable {
-        checkIdHasText: typeof checkIdHasText;
-  
-        clickDataModuleByText: typeof clickDataModuleByText;
+  checkIdHasText,
+  clickDataModuleByText,
+  clickByID,
+  clickByValue,
+  assertURLContains,
+  enterValueByID,
+  assertDataModuleHasText,
+  enterDate,
+} from "./helpers";
 
-        clickByID: typeof clickByID;
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      checkIdHasText: typeof checkIdHasText;
 
-        clickByValue: typeof clickByValue;
+      clickDataModuleByText: typeof clickDataModuleByText;
 
-        assertURLContains: typeof assertURLContains;
+      clickByID: typeof clickByID;
 
-        enterValueByID: typeof enterValueByID;
+      clickByValue: typeof clickByValue;
 
-        assertDataModuleHasText: typeof assertDataModuleHasText;
+      assertURLContains: typeof assertURLContains;
 
-        enterDate: typeof enterDate;
-      }
+      enterValueByID: typeof enterValueByID;
+
+      assertDataModuleHasText: typeof assertDataModuleHasText;
+
+      enterDate: typeof enterDate;
     }
   }
-  
-  Cypress.Commands.add('checkIdHasText', checkIdHasText);
-  
-  Cypress.Commands.add('clickDataModuleByText', clickDataModuleByText);
+}
 
-  Cypress.Commands.add('clickByID', clickByID);
+Cypress.Commands.add("checkIdHasText", checkIdHasText);
 
-  Cypress.Commands.add('clickByValue', clickByValue);
+Cypress.Commands.add("clickDataModuleByText", clickDataModuleByText);
 
-  Cypress.Commands.add('assertURLContains', assertURLContains);
+Cypress.Commands.add("clickByID", clickByID);
 
-  Cypress.Commands.add('enterValueByID', enterValueByID);
+Cypress.Commands.add("clickByValue", clickByValue);
 
-  Cypress.Commands.add('assertDataModuleHasText', assertDataModuleHasText);
+Cypress.Commands.add("assertURLContains", assertURLContains);
 
-  Cypress.Commands.add('enterDate', enterDate);
+Cypress.Commands.add("enterValueByID", enterValueByID);
+
+Cypress.Commands.add("assertDataModuleHasText", assertDataModuleHasText);
+
+Cypress.Commands.add("enterDate", enterDate);

@@ -7,7 +7,7 @@
     "start": "npx http-server",
     "cy-run": "cypress run",
     "cy-open": "cypress open",
-    "format": "prettier cypress/e2e/bbc.cy.ts --write",
+    "format": "prettier cypress/support/*.ts --write",
     "lint": "eslint ."
   },
   "author": "",
