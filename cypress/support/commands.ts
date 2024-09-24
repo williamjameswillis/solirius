@@ -1,6 +1,6 @@
-/// <reference types="cypress" />
+/* eslint-disable @typescript-eslint/no-namespace */
 // ***********************************************
-// This example commands.ts shows you how to
+// This example commands.js shows you how to
 // create various custom commands and overwrite
 // existing commands.
 //
@@ -9,29 +9,52 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 //
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-//
-// declare global {
-//   namespace Cypress {
-//     interface Chainable {
-//       login(email: string, password: string): Chainable<void>
-//       drag(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       dismiss(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       visit(originalFn: CommandOriginalFn, url: string, options: Partial<VisitOptions>): Chainable<Element>
-//     }
-//   }
-// }
+
+import {
+    checkIdHasText,
+    clickDataModuleByText,
+    clickByID,
+    clickByValue,
+    assertURLContains,
+    enterValueByID,
+    assertDataModuleHasText,
+    enterDate
+  } from './helpers';
+  
+  declare global {
+    namespace Cypress {
+      interface Chainable {
+        checkIdHasText: typeof checkIdHasText;
+  
+        clickDataModuleByText: typeof clickDataModuleByText;
+
+        clickByID: typeof clickByID;
+
+        clickByValue: typeof clickByValue;
+
+        assertURLContains: typeof assertURLContains;
+
+        enterValueByID: typeof enterValueByID;
+
+        assertDataModuleHasText: typeof assertDataModuleHasText;
+
+        enterDate: typeof enterDate;
+      }
+    }
+  }
+  
+  Cypress.Commands.add('checkIdHasText', checkIdHasText);
+  
+  Cypress.Commands.add('clickDataModuleByText', clickDataModuleByText);
+
+  Cypress.Commands.add('clickByID', clickByID);
+
+  Cypress.Commands.add('clickByValue', clickByValue);
+
+  Cypress.Commands.add('assertURLContains', assertURLContains);
+
+  Cypress.Commands.add('enterValueByID', enterValueByID);
+
+  Cypress.Commands.add('assertDataModuleHasText', assertDataModuleHasText);
+
+  Cypress.Commands.add('enterDate', enterDate);

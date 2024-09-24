@@ -6,6 +6,7 @@ import { createEsbuildPlugin } from "@badeball/cypress-cucumber-preprocessor/esb
 export default defineConfig({
   e2e: {
     specPattern: "**/*.feature",
+    baseUrl: 'https://www.gov.uk/calculate-your-holiday-entitlement',
     async setupNodeEvents(
       on: Cypress.PluginEvents,
       config: Cypress.PluginConfigOptions
