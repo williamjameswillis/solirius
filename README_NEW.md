@@ -26,18 +26,19 @@ Use a Page Object Model with inheritance to define each page we need to deal wit
 
 ### Approach and Tooling
 
-I decided to both manually test the index.html page and also use Cypress test tool with cypress-axe and axe-core to automatically detect and log out violations to the terminal.
+I decided to do both manual and automatic accessibility testing of the the index.html page. The automated accessibility testing uses the same Cypress test tool as from task1 with the cypress-axe and axe-core libraries used to automatically detect and log out violations to the terminal.
 
 Decided to just use the mocha syntax for this single test as its much simpler.
 
 ### Manually identified accessibility violations:
 
 1. accessibility is spelt wrong - could confuse a visually impaired user using a screen reader
-2. there is no defined tab index/order so the Done button cannot be tabbed to the right
-3. the form fields are missing both labels and aria label tags - therefore a screen reader could not easily identify to a visually impaired user 
+2. there is no defined tab index/order so the Done button cannot be tabbed to - would make it difficult/impossible to use for a visually impaired user
+3. the form fields are missing both labels and aria label tags - therefore a screen reader could not easily identify them to a visually impaired user 
 4. the image has no alt text so a screen reader will not be able to tell the user what the image is displaying
-5. the form doesnt have a h1 - it goes straight to h2 + the h1 should be outside the form field
-6. the fields are missing focus and active states so its not easy to see what is going on when using the form
+5. the image is in a div called contact-form-section which might mislead a user
+6. the form doesnt have a h1, it goes straight to h2 + the h1 should be outside the form field
+7. the fields are missing focus and active states so its not easy to see what is going on when using the form
 
 ### How to guide - automation
 
