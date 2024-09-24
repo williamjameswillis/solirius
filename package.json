@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "npx http-server",
-    "cy-run": "cypress run",
+    "cy-task1": "cypress run --spec \"cypress/e2e/RegularWorker.feature\"",
     "cy-open": "cypress open",
+    "cy-bonus": "yarn start & cypress run --spec \"cypress/e2e/bonusTest.cy.ts\"",
     "format": "prettier cypress/support/*.ts --write",
     "lint": "eslint ."
   },
@@ -16,6 +17,8 @@
     "http-server": "latest",
     "typescript": "latest",
     "cypress": "latest",
+    "cypress-axe": "latest",
+    "axe-core": "latest",
     "@badeball/cypress-cucumber-preprocessor": "latest",
     "@bahmutov/cypress-esbuild-preprocessor": "latest",
     "@eslint/js": "latest",

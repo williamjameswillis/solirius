@@ -10,6 +10,7 @@
 // ***********************************************
 //
 
+import { a11y } from "./a11y";
 import {
   checkIdHasText,
   clickDataModuleByText,
@@ -39,6 +40,8 @@ declare global {
       assertDataModuleHasText: typeof assertDataModuleHasText;
 
       enterDate: typeof enterDate;
+
+      a11y: typeof a11y;
     }
   }
 }
@@ -58,3 +61,5 @@ Cypress.Commands.add("enterValueByID", enterValueByID);
 Cypress.Commands.add("assertDataModuleHasText", assertDataModuleHasText);
 
 Cypress.Commands.add("enterDate", enterDate);
+
+Cypress.Commands.add("a11y", a11y);
