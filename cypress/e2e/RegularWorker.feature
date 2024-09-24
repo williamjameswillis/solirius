@@ -119,3 +119,6 @@ Feature: Calculate Holiday Entitlement on the government website for regular wor
             | days-worked-per-week  | starting | 01 01 2024 | 02 01 2290 | Your leave year start date must be earlier than your employment start date of |
             | days-worked-per-week  | starting | 01 01 2024 | 02 01 100 | Your employment start date of |
             | days-worked-per-week  | starting | 01 01 2024 || Please answer this question |
+
+
+    #  The same pattern as above can be built out to cover all positive and negative scenario combinations of holidayEntitlementType and holidayLengthCalculation etc
