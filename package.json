@@ -4,7 +4,7 @@
   "description": "Your task is to create a functional automated UI test suite using JavaScript, TypeScript, or a language of your choice. We would like you to use tools like Playwright, Cypress, or similar alternatives; kindly avoid using Selenium with Java. However should you opt to use Selenium with Java, we will inquire as to your reasoning's into why you did not opt for an alternative framework or language.",
   "main": "index.js",
   "scripts": {
-    "start": "npx http-server",
+    "start": "npx http-server -p 8080",
     "cy-task1": "cypress run --spec \"cypress/e2e/RegularWorker.feature\"",
     "cy-open": "cypress open",
     "cy-bonus": "yarn start & cypress run --spec \"cypress/e2e/bonusTest.cy.ts\"",
@@ -25,7 +25,8 @@
     "@types/eslint__js": "latest",
     "eslint": "latest",
     "prettier": "latest",
-    "typescript-eslint": "latest"
+    "typescript-eslint": "latest",
+    "yarn": "latest"
   },
   "cypress-cucumber-preprocessor": {
     "json": {
