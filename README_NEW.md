@@ -10,7 +10,7 @@ I also love BDD/Gherkin syntax for testing so I decided to structure the tests u
 
 ### How to guide
 
-Install node version 18.18.2 or higher. Run yarn to install dependencies and then use the scripts defined in package.json to either run the tests headed `cy-open` or headless `cy-task1`.
+Install node version 18.18.2 or higher. Install yarn and run yarn to install dependencies and then use the scripts defined in package.json to either run the tests headed `cy-open` or headless `cy-task1`.
 
 ### Improvements to make
 
