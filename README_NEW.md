@@ -69,6 +69,10 @@ I would attach into the bug ticket a video of the Actual behaviour for the devel
 
 Same as for Task1 however the headless command is `cy-bonus`. You will see that this identifies 3 violations when configured to the WCAG2.2 AA standard.
 
+Note that you may need to use the command to kill the port if you have already served the website locally `npx kill-port 8080`.
+
 ### Improvements to make
 
 Could use a tool like google lighthouse to identify further accessibility issues. 
+
+Could up the WCAG level to identify more issues.
